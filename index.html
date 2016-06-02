@@ -22,6 +22,9 @@
     <span class="long-lat-vals" id="long_low">-122.43</span> and <span class="long-lat_vals" id="long_high">-122.4013881</span>
     <script>
     
+      /* Set the number of decimals you wish to round longitude/latitude to*/
+      var decimal_round = 4;
+      
       function initMap() {
         var mapDiv = document.getElementById('map');
         var map = new google.maps.Map(mapDiv, {
@@ -52,12 +55,12 @@
           // rectangle.bounds = { h, j }
           // latitude is j ... longitude is h
           if(rectangle.bounds.j.j < rectangle.bounds.j.H){
-            document.getElementById("long_low").innerHTML= rectangle.bounds.j.j;
-            document.getElementById("long_high").innerHTML= rectangle.bounds.j.H;
+            document.getElementById("long_low").innerHTML= rectangle.bounds.j.j.toFixed(decimal_round);
+            document.getElementById("long_high").innerHTML= rectangle.bounds.j.H.toFixed(decimal_round);
           }
           else{
-            document.getElementById("long_low").innerHTML= rectangle.bounds.j.H;
-            document.getElementById("long_high").innerHTML= rectangle.bounds.j.j;
+            document.getElementById("long_low").innerHTML= rectangle.bounds.j.H.toFixed(decimal_round);
+            document.getElementById("long_high").innerHTML= rectangle.bounds.j.j.toFixed(decimal_round);
           }
         });
       }
