@@ -40,6 +40,8 @@
         
         google.maps.event.addListener(rectangle, 'bounds_changed', function() {
           console.log(rectangle.bounds);
+          // rectangle.bounds = { h, j }
+          // latitude is j ... longitude is h
         });
       }
       
