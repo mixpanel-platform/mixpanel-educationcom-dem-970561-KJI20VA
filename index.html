@@ -37,9 +37,12 @@
             west: -122.43
           }
         });
+        
+        google.maps.event.addListener(rectangle, 'bounds_changed', function() {
+          console.log('Bounds changed.');
+        });
       }
       
-
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
         async defer></script>
