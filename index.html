@@ -18,8 +18,11 @@
   <body>
     <div id="map"></div>
     <br clear="all" />
+    <div id="lat_header">Latitude Property Between...</div><br clear="all" />
+    <span class="long-lat-vals" id="lat_low">-122.4300</span> and <span class="long-lat_vals" id="lat_high">-122.4013</span>
+    <br clear="all" />
     <div id="long_header">Longitude Property Between...</div><br clear="all" />
-    <span class="long-lat-vals" id="long_low">-122.4300</span> and <span class="long-lat_vals" id="long_high">-122.4013</span>
+    <span class="long-lat-vals" id="long_low">37.7839</span> and <span class="long-lat_vals" id="long_high">37.8</span>
     <script>
     
       /* Set the number of decimals you wish to round longitude/latitude to*/
@@ -57,12 +60,12 @@
           
           // Handle Latitude
           if(rectangle.bounds.j.j < rectangle.bounds.j.H){
-            document.getElementById("long_low").innerHTML= rectangle.bounds.j.j.toFixed(decimal_round);
-            document.getElementById("long_high").innerHTML= rectangle.bounds.j.H.toFixed(decimal_round);
+            document.getElementById("lat_low").innerHTML= rectangle.bounds.j.j.toFixed(decimal_round);
+            document.getElementById("lat_high").innerHTML= rectangle.bounds.j.H.toFixed(decimal_round);
           }
           else{
-            document.getElementById("long_low").innerHTML= rectangle.bounds.j.H.toFixed(decimal_round);
-            document.getElementById("long_high").innerHTML= rectangle.bounds.j.j.toFixed(decimal_round);
+            document.getElementById("lat_low").innerHTML= rectangle.bounds.j.H.toFixed(decimal_round);
+            document.getElementById("lat_high").innerHTML= rectangle.bounds.j.j.toFixed(decimal_round);
           }
           
           // Handle Longitude
