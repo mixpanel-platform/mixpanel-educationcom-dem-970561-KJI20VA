@@ -54,6 +54,8 @@
           console.log(rectangle.bounds);
           // rectangle.bounds = { h, j }
           // latitude is j ... longitude is h
+          
+          // Handle Latitude
           if(rectangle.bounds.j.j < rectangle.bounds.j.H){
             document.getElementById("long_low").innerHTML= rectangle.bounds.j.j.toFixed(decimal_round);
             document.getElementById("long_high").innerHTML= rectangle.bounds.j.H.toFixed(decimal_round);
@@ -61,6 +63,16 @@
           else{
             document.getElementById("long_low").innerHTML= rectangle.bounds.j.H.toFixed(decimal_round);
             document.getElementById("long_high").innerHTML= rectangle.bounds.j.j.toFixed(decimal_round);
+          }
+          
+          // Handle Longitude
+          if(rectangle.bounds.H.j < rectangle.bounds.H.H){
+            document.getElementById("long_low").innerHTML= rectangle.bounds.H.j.toFixed(decimal_round);
+            document.getElementById("long_high").innerHTML= rectangle.bounds.H.H.toFixed(decimal_round);
+          }
+          else{
+            document.getElementById("long_low").innerHTML= rectangle.bounds.H.H.toFixed(decimal_round);
+            document.getElementById("long_high").innerHTML= rectangle.bounds.H.j.toFixed(decimal_round);
           }
         });
       }
