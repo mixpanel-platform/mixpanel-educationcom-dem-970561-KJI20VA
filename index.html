@@ -19,7 +19,7 @@
     <div id="map"></div>
     <br clear="all" />
     <div id="long_header">Longitude Property Between...</div><br clear="all" />
-    <span id="long_low">-122.43</span> and <span id="long_high">-122.4013881</span>
+    <span class="long-lat-vals" id="long_low">-122.43</span> and <span class="long-lat_vals" id="long_high">-122.4013881</span>
     <script>
     
       function initMap() {
@@ -51,6 +51,14 @@
           console.log(rectangle.bounds);
           // rectangle.bounds = { h, j }
           // latitude is j ... longitude is h
+          if(rectangle.bounds.j.j < rectangle.bounds.j.h){
+            document.getElementById("long_low").innerHTML= rectangle.bounds.j.j;
+            document.getElementById("long_high").innerHTML= rectangle.bounds.j.h;
+          }
+          else{
+            document.getElementById("long_low").innerHTML= rectangle.bounds.j.h;
+            document.getElementById("long_high").innerHTML= rectangle.bounds.j.h;
+          }
         });
       }
       
