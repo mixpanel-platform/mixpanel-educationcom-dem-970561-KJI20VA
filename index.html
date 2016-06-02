@@ -51,13 +51,13 @@
           console.log(rectangle.bounds);
           // rectangle.bounds = { h, j }
           // latitude is j ... longitude is h
-          if(rectangle.bounds.j.j < rectangle.bounds.j.h){
+          if(rectangle.bounds.j.j < rectangle.bounds.j.H){
             document.getElementById("long_low").innerHTML= rectangle.bounds.j.j;
-            document.getElementById("long_high").innerHTML= rectangle.bounds.j.h;
+            document.getElementById("long_high").innerHTML= rectangle.bounds.j.H;
           }
           else{
-            document.getElementById("long_low").innerHTML= rectangle.bounds.j.h;
-            document.getElementById("long_high").innerHTML= rectangle.bounds.j.h;
+            document.getElementById("long_low").innerHTML= rectangle.bounds.j.H;
+            document.getElementById("long_high").innerHTML= rectangle.bounds.j.j;
           }
         });
       }
